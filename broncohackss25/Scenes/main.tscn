@@ -6,6 +6,7 @@
 
 [gd_scene load_steps=6 format=3 uid="uid://dkbtci03h0ubh"]
 
+[ext_resource type="Script" uid="uid://bus0kkm6n8p3n" path="res://Scripts/main.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://c706mvhxakqxq" path="res://Scenes/stats_ui.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://i45u813ov17b" path="res://Assets/STU.png" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://cdnscn70mvut2" path="res://Assets/planner_close.png" id="3_kry3j"]
@@ -13,6 +14,7 @@
 [ext_resource type="Script" uid="uid://bo5asvu21tp7w" path="res://Scripts/go_to_journal.gd" id="5_kry3j"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_21xkr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

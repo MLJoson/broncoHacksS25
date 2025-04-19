@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ctbetkwhbtm82"]
 
-[ext_resource type="Script" uid="uid://daoep2vrle5b8" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://daoep2vrle5b8" path="res://Scripts/menu.gd" id="1_lti8b"]
 [ext_resource type="Texture2D" uid="uid://davaohmlcuxno" path="res://Assets/1966.png" id="2_ouk20"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ouk20"]
