@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c706mvhxakqxq"]
 
-[ext_resource type="PackedScene" uid="uid://g2tenaqhkqfq" path="res://bar.tscn" id="1_aj7cv"]
+[ext_resource type="PackedScene" uid="uid://g2tenaqhkqfq" path="res://bar.tscn" id="1_h18qs"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,12 +11,15 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 6.0
-offset_right = 46.0
-offset_bottom = 126.0
-scale = Vector2(0.8, 0.8)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -130.0
+offset_right = 50.0
+offset_bottom = -10.0
+grow_vertical = 0
 theme_override_constants/separation = 40
 
 [node name="Academic" type="Control" parent="VBoxContainer"]
@@ -29,7 +32,7 @@ offset_right = 47.0
 offset_bottom = 27.0
 text = "Academic"
 
-[node name="Bar" parent="VBoxContainer/Academic" instance=ExtResource("1_aj7cv")]
+[node name="Bar" parent="VBoxContainer/Academic" instance=ExtResource("1_h18qs")]
 layout_mode = 0
 offset_left = 80.0
 offset_right = 281.0
@@ -44,7 +47,7 @@ offset_right = 47.0
 offset_bottom = 27.0
 text = "Stress"
 
-[node name="Bar" parent="VBoxContainer/Stress" instance=ExtResource("1_aj7cv")]
+[node name="Bar" parent="VBoxContainer/Stress" instance=ExtResource("1_h18qs")]
 layout_mode = 0
 offset_left = 80.0
 offset_right = 281.0
@@ -59,7 +62,7 @@ offset_right = 47.0
 offset_bottom = 27.0
 text = "Social"
 
-[node name="Bar" parent="VBoxContainer/Social" instance=ExtResource("1_aj7cv")]
+[node name="Bar" parent="VBoxContainer/Social" instance=ExtResource("1_h18qs")]
 layout_mode = 0
 offset_left = 80.0
 offset_right = 281.0
