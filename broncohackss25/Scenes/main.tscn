@@ -1,11 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://chmt5snj5c7hl"]
 
-[ext_resource type="PackedScene" uid="uid://c706mvhxakqxq" path="res://Scenes/stats_ui.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://dpe3gs7ugm2q0" path="res://Scenes/stu.tscn" id="2_kry3j"]
-[ext_resource type="Texture2D" uid="uid://cdnscn70mvut2" path="res://Assets/planner_close.png" id="3_kry3j"]
-[ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="4_21xkr"]
 [ext_resource type="Script" uid="uid://bo5asvu21tp7w" path="res://Scripts/texture_button.gd" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://b8bodcpcgtg4l" path="res://Scenes/background.tscn" id="6_21xkr"]
+
+[gd_scene load_steps=6 format=3 uid="uid://dkbtci03h0ubh"]
+
+[ext_resource type="PackedScene" uid="uid://c706mvhxakqxq" path="res://Scenes/stats_ui.tscn" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://i45u813ov17b" path="res://Assets/STU.png" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://cdnscn70mvut2" path="res://Assets/planner_close.png" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="4_21xkr"]
+[ext_resource type="Script" uid="uid://bo5asvu21tp7w" path="res://Scripts/go_to_journal.gd" id="5_kry3j"]
 
 [node name="Main" type="Node2D"]
 
