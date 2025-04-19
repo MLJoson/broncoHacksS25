@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0s1xrvohf8ch"]
+[gd_scene load_steps=5 format=3 uid="uid://b0s1xrvohf8ch"]
 
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="1_civ5d"]
 [ext_resource type="Texture2D" uid="uid://cl1ida1d5vrqi" path="res://Assets/back-removebg-preview(1).png" id="2_okafp"]
 [ext_resource type="Script" uid="uid://bulkb2x8taqvi" path="res://Scripts/go_to_room.gd" id="3_4xnl1"]
+[ext_resource type="PackedScene" uid="uid://l6axmqpyfjt2" path="res://Scenes/tasklist.tscn" id="4_4xnl1"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -35,5 +36,25 @@ offset_right = -319.0
 offset_bottom = -254.0
 texture_normal = ExtResource("2_okafp")
 script = ExtResource("3_4xnl1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = -298.0
+offset_right = 158.0
+offset_bottom = -267.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Itinerary"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = -259.0
+offset_right = 103.0
+offset_bottom = -219.0
+
+[node name="VBoxContainer" parent="HBoxContainer" instance=ExtResource("4_4xnl1")]
+layout_mode = 2
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
