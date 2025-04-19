@@ -187,7 +187,6 @@ func get_planned_stat_changes() -> Dictionary:
 	return total_changes
 
 
-
 func _ready():
 	#Example usage
 	study()
