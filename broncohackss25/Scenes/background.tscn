@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8bodcpcgtg4l"]
+
+[ext_resource type="Texture2D" uid="uid://cgu057fw1di4w" path="res://Assets/Background/Desk.png" id="1_4aqey"]
+[ext_resource type="Script" uid="uid://bgg6duo2bgviq" path="res://Scripts/background.gd" id="1_xgxeb"]
+[ext_resource type="Texture2D" uid="uid://8p50eq73byo5" path="res://Assets/Background/Bg1.png" id="2_xgxeb"]
+[ext_resource type="Texture2D" uid="uid://b2jur42onrfm4" path="res://Assets/Background/Bg2.png" id="3_ltlj5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rymcx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4aqey")
+}],
+"loop": true,
+"name": &"desk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xgxeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ltlj5")
+}],
+"loop": true,
+"name": &"dorm",
+"speed": 2.0
+}]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_xgxeb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rymcx")
+animation = &"dorm"
+frame_progress = 0.838194

@@ -1,3 +1,9 @@
+[gd_scene load_steps=7 format=3 uid="uid://chmt5snj5c7hl"]
+
+[ext_resource type="PackedScene" uid="uid://dpe3gs7ugm2q0" path="res://Scenes/stu.tscn" id="2_kry3j"]
+[ext_resource type="Script" uid="uid://bo5asvu21tp7w" path="res://Scripts/texture_button.gd" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://b8bodcpcgtg4l" path="res://Scenes/background.tscn" id="6_21xkr"]
+
 [gd_scene load_steps=6 format=3 uid="uid://dkbtci03h0ubh"]
 
 [ext_resource type="PackedScene" uid="uid://c706mvhxakqxq" path="res://Scenes/stats_ui.tscn" id="1_jjgbg"]
@@ -25,8 +31,10 @@ offset_bottom = 640.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_bo1nx")
 expand_mode = 1
+
+[node name="STU" parent="CanvasLayer/STU" instance=ExtResource("2_kry3j")]
+position = Vector2(614, 654)
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = 3
@@ -44,5 +52,19 @@ scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("3_kry3j")
 texture_hover = ExtResource("4_21xkr")
 script = ExtResource("5_kry3j")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+expand_mode = 1
+
+[node name="Background" parent="Background" instance=ExtResource("6_21xkr")]
+position = Vector2(576, 272)
+scale = Vector2(1.15, 1.15)
 
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="CanvasLayer/TextureButton" method="_on_pressed"]

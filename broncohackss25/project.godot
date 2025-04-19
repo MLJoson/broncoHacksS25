@@ -11,7 +11,9 @@ config_version=5
 [application]
 
 config/name="BroncoHacksS25"
+
 run/main_scene="uid://ctbetkwhbtm82"
+
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
