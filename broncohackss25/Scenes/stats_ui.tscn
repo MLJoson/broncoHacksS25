@@ -32,6 +32,7 @@ layout_mode = 0
 offset_top = 4.0
 offset_right = 47.0
 offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Academic"
 
 [node name="Bar" parent="VBoxContainer/Academic" instance=ExtResource("1_h18qs")]
@@ -47,6 +48,7 @@ layout_mode = 0
 offset_top = 4.0
 offset_right = 47.0
 offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Stress"
 
 [node name="Bar" parent="VBoxContainer/Stress" instance=ExtResource("1_h18qs")]
@@ -62,6 +64,7 @@ layout_mode = 0
 offset_top = 4.0
 offset_right = 47.0
 offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Social"
 
 [node name="Bar" parent="VBoxContainer/Social" instance=ExtResource("1_h18qs")]
