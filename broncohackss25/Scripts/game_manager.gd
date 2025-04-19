@@ -2,6 +2,7 @@ extends Node
 
 #Connect to player_status file
 @export var PlayerStatus: PlayerStatus
+var player_status = load("res://Scripts/player_status.gd").new()
 
 #Action class to define actions for player
 class Action:
@@ -629,6 +630,8 @@ func get_planned_stat_changes() -> Dictionary:
 			total_changes[stat] += action.effects[stat]
 	return total_changes
 
+var stu_status: int = 4;
+
 func calculate_stu():
 	#if 0 - defualt
 	#if 1 - happy
@@ -637,19 +640,19 @@ func calculate_stu():
 	#if 4 - normal
 	#if 5 - nerd
 	#if 6 - tired
-	var stu_status: int = 4;
-	if (PlayerStatus.academic < 25):
-		stu_status = 2
-	if(PlayerStatus.academic > 75):
+	if player_status.academic > 75:
 		stu_status = 5
-	if(PlayerStatus.wellbeing < 25):
+	if player_status.wellbeing > 75:
+		stu_status = 1
+	if player_status.social > 75:
+		stu_status = 1
+	if player_status.academic < 25:
+		stu_status = 2
+	if player_status.wellbeing < 25:
 		stu_status = 3
-	if(PlayerStatus.wellbeing > 75):
-		stu_status = 1
-	if(PlayerStatus.social < 25):
+	if player_status.social < 25:
 		stu_status = 6
-	if(PlayerStatus.social > 75):
-		stu_status = 1
+	
 
 func _ready():
 	#Example usage
