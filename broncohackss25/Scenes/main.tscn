@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="4_21xkr"]
 [ext_resource type="Script" uid="uid://bo5asvu21tp7w" path="res://Scripts/go_to_journal.gd" id="5_kry3j"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_21xkr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
