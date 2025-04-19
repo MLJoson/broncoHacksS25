@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="1_civ5d"]
 [ext_resource type="Texture2D" uid="uid://cl1ida1d5vrqi" path="res://Assets/back-removebg-preview(1).png" id="2_okafp"]
-[ext_resource type="Script" path="res://Scenes/texture_button.gd" id="3_4xnl1"]
+[ext_resource type="Script" uid="uid://bulkb2x8taqvi" path="res://Scripts/go_to_room.gd" id="3_4xnl1"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
