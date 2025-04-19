@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkbtci03h0ubh"]
+[gd_scene load_steps=12 format=3 uid="uid://dkbtci03h0ubh"]
 
 [ext_resource type="Script" uid="uid://bus0kkm6n8p3n" path="res://Scripts/main.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://c706mvhxakqxq" path="res://Scenes/stats_ui.tscn" id="1_jjgbg"]
@@ -6,7 +6,59 @@
 [ext_resource type="PackedScene" uid="uid://dpe3gs7ugm2q0" path="res://Scenes/stu.tscn" id="3_21xkr"]
 [ext_resource type="Texture2D" uid="uid://cdnscn70mvut2" path="res://Assets/planner_close.png" id="3_kry3j"]
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="4_21xkr"]
-[ext_resource type="Script" path="res://Scripts/go_to_journal.gd" id="5_kry3j"]
+[ext_resource type="Script" uid="uid://bo5asvu21tp7w" path="res://Scripts/go_to_journal.gd" id="5_kry3j"]
+
+[sub_resource type="Animation" id="Animation_344ge"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ynf5e"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6bp64"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hptm8"]
+_data = {
+&"RESET": SubResource("Animation_344ge"),
+&"fade_in": SubResource("Animation_ynf5e"),
+&"fade_out": SubResource("Animation_6bp64")
+}
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -70,4 +122,18 @@ texture_normal = ExtResource("3_kry3j")
 texture_hover = ExtResource("4_21xkr")
 script = ExtResource("5_kry3j")
 
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hptm8")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="CanvasLayer/TextureButton" method="_on_pressed"]
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
