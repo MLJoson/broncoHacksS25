@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfgjnulr1e7g0"]
+
+[ext_resource type="Script" uid="uid://bijlxlwuiu7gb" path="res://Scripts/task.gd" id="1_pcxva"]
+
+[node name="Task" type="HBoxContainer"]
+script = ExtResource("1_pcxva")
+
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+
+[connection signal="pressed" from="CheckBox" to="." method="_on_check_box_pressed"]

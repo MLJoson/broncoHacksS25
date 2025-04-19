@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhohlvxqbneog"]
+[gd_scene load_steps=3 format=3 uid="uid://c706mvhxakqxq"]
 
-[ext_resource type="PackedScene" uid="uid://c4vefs6qklfaq" path="res://bar.tscn" id="1_h18qs"]
-[ext_resource type="Script" uid="uid://cnnwx2dda1j5k" path="res://Scripts/player_status.gd" id="2_ln25e"]
+[ext_resource type="Script" uid="uid://enuec0c6otxd" path="res://Scenes/bar_manager.gd" id="1_dv0x8"]
+[ext_resource type="PackedScene" uid="uid://g2tenaqhkqfq" path="res://Scenes/bar.tscn" id="1_h18qs"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +22,7 @@ offset_right = 50.0
 offset_bottom = -10.0
 grow_vertical = 0
 theme_override_constants/separation = 40
+script = ExtResource("1_dv0x8")
 
 [node name="Academic" type="Control" parent="VBoxContainer"]
 layout_mode = 2
@@ -33,12 +34,10 @@ offset_right = 47.0
 offset_bottom = 27.0
 text = "Academic"
 
-[node name="Bar" parent="VBoxContainer/Academic" node_paths=PackedStringArray("PlayerStatus") instance=ExtResource("1_h18qs")]
+[node name="Bar" parent="VBoxContainer/Academic" instance=ExtResource("1_h18qs")]
 layout_mode = 0
 offset_left = 80.0
 offset_right = 281.0
-PlayerStatus = NodePath("../../../PlayerStatus")
-stat_name = "academic"
 
 [node name="Stress" type="Control" parent="VBoxContainer"]
 layout_mode = 2
@@ -50,12 +49,10 @@ offset_right = 47.0
 offset_bottom = 27.0
 text = "Stress"
 
-[node name="Bar" parent="VBoxContainer/Stress" node_paths=PackedStringArray("PlayerStatus") instance=ExtResource("1_h18qs")]
+[node name="Bar" parent="VBoxContainer/Stress" instance=ExtResource("1_h18qs")]
 layout_mode = 0
 offset_left = 80.0
 offset_right = 281.0
-PlayerStatus = NodePath("../../../PlayerStatus")
-stat_name = "wellbeing"
 
 [node name="Social" type="Control" parent="VBoxContainer"]
 layout_mode = 2
@@ -67,12 +64,7 @@ offset_right = 47.0
 offset_bottom = 27.0
 text = "Social"
 
-[node name="Bar" parent="VBoxContainer/Social" node_paths=PackedStringArray("PlayerStatus") instance=ExtResource("1_h18qs")]
+[node name="Bar" parent="VBoxContainer/Social" instance=ExtResource("1_h18qs")]
 layout_mode = 0
 offset_left = 80.0
 offset_right = 281.0
-PlayerStatus = NodePath("../../../PlayerStatus")
-stat_name = "social"
-
-[node name="PlayerStatus" type="Node" parent="."]
-script = ExtResource("2_ln25e")
