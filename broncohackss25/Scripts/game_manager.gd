@@ -11,7 +11,12 @@ class Action:
 	func _init(_name: String, _effects: Dictionary):
 		name = _name
 		effects = _effects
-
+	func get_name():
+		return name
+		
+	func get_effects():
+		return effects
+		
 #make planned actions from user
 var planned_actions: Array[Action] = []
 ##the randomized options player can choose
@@ -565,8 +570,6 @@ func saturday():
 	}
 
 
-
-
 #start the day
 func new_day():
 	current_day += 1
@@ -631,11 +634,10 @@ func _ready():
 	study()
 	PlayerStatus.print_stats()
 
-func pool_to_array() -> Array:
+func get_actions() -> Array:
 	sunday()
-	print(action_pool)
-	return action_pool.keys()
-		
-
+	# print(action_pool)
+	print(action_pool.values())
+	return action_pool.values()
 func study():
 	PlayerStatus.change_stat("academic", 10)
