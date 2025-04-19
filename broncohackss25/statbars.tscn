@@ -1,0 +1,174 @@
+[gd_scene load_steps=9 format=3 uid="uid://c706mvhxakqxq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2n50a"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.156863, 0.156863, 0.156863, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj7cv"]
+bg_color = Color(0, 0.501961, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lplgt"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.156863, 0.156863, 0.156863, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7sh5c"]
+bg_color = Color(0, 0.501961, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hsgx"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.156863, 0.156863, 0.156863, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f258b"]
+bg_color = Color(0, 0.501961, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jy4po"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.156863, 0.156863, 0.156863, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bgd6"]
+bg_color = Color(0, 0.501961, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 46.0
+offset_bottom = 126.0
+theme_override_constants/separation = 40
+
+[node name="Academic" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Academic"]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 27.0
+text = "Academic"
+
+[node name="Bar" type="ProgressBar" parent="VBoxContainer/Academic"]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 281.0
+offset_bottom = 32.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2n50a")
+theme_override_styles/fill = SubResource("StyleBoxFlat_aj7cv")
+value = 80.0
+
+[node name="Sleep" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Sleep"]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 27.0
+text = "Sleep"
+
+[node name="Bar" type="ProgressBar" parent="VBoxContainer/Sleep"]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 281.0
+offset_bottom = 32.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lplgt")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7sh5c")
+
+[node name="Stress" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Stress"]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 27.0
+text = "Stress"
+
+[node name="Bar" type="ProgressBar" parent="VBoxContainer/Stress"]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 281.0
+offset_bottom = 32.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0hsgx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_f258b")
+
+[node name="Social" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Social"]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 27.0
+text = "Social"
+
+[node name="Bar" type="ProgressBar" parent="VBoxContainer/Social"]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 281.0
+offset_bottom = 32.0
+theme_override_styles/background = SubResource("StyleBoxFlat_jy4po")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3bgd6")
