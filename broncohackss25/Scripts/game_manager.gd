@@ -2,6 +2,7 @@ extends Node
 
 #Connect to player_status file
 @export var PlayerStatus: PlayerStatus
+var player_status = load("res://Scripts/player_status.gd").new()
 
 #Action class to define actions for player
 class Action:
@@ -11,7 +12,12 @@ class Action:
 	func _init(_name: String, _effects: Dictionary):
 		name = _name
 		effects = _effects
-
+	func get_name():
+		return name
+		
+	func get_effects():
+		return effects
+		
 #make planned actions from user
 var planned_actions: Array[Action] = []
 ##the randomized options player can choose
@@ -565,8 +571,6 @@ func saturday():
 	}
 
 
-
-
 #start the day
 func new_day():
 	current_day += 1
@@ -626,16 +630,39 @@ func get_planned_stat_changes() -> Dictionary:
 			total_changes[stat] += action.effects[stat]
 	return total_changes
 
+var stu_status: int = 4;
+
+func calculate_stu():
+	#if 0 - defualt
+	#if 1 - happy
+	#if 2 - shrimpin
+	#if 3 - crashing out
+	#if 4 - normal
+	#if 5 - nerd
+	#if 6 - tired
+	if player_status.academic > 75:
+		stu_status = 5
+	if player_status.wellbeing > 75:
+		stu_status = 1
+	if player_status.social > 75:
+		stu_status = 1
+	if player_status.academic < 25:
+		stu_status = 2
+	if player_status.wellbeing < 25:
+		stu_status = 3
+	if player_status.social < 25:
+		stu_status = 6
+	
+
 func _ready():
 	#Example usage
-	study()
+	#study()
 	PlayerStatus.print_stats()
 
-func pool_to_array() -> Array:
+func get_actions() -> Array:
 	sunday()
-	print(action_pool)
-	return action_pool.keys()
-		
-
+	# print(action_pool)
+	print(action_pool.values())
+	return action_pool.values()
 func study():
 	PlayerStatus.change_stat("academic", 10)
