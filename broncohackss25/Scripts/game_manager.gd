@@ -14,7 +14,6 @@ class Action:
 
 #make planned actions from user
 var planned_actions: Array[Action] = []
-
 ##the randomized options player can choose
 #var action_pool:= {
 	##Major events
@@ -115,6 +114,7 @@ var planned_actions: Array[Action] = []
 var current_day: int = 1
 var current_day_actions: Array[Action] = []
 var actions_per_day: int = 4
+var action_pool = {}
 
 #picks random actions from the day
 func generate_actions():
@@ -146,7 +146,7 @@ func generate_actions():
 
 #sunday and its task
 func sunday():
-	var action_pool:= {
+	action_pool = {
 		"Walk": Action.new("Walk", {
 		"energy": 5,
 		"time": 1,
@@ -626,11 +626,16 @@ func get_planned_stat_changes() -> Dictionary:
 			total_changes[stat] += action.effects[stat]
 	return total_changes
 
-
 func _ready():
 	#Example usage
 	study()
 	PlayerStatus.print_stats()
+
+func pool_to_array() -> Array:
+	sunday()
+	print(action_pool)
+	return action_pool.keys()
+		
 
 func study():
 	PlayerStatus.change_stat("academic", 10)
