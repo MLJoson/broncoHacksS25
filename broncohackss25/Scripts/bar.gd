@@ -6,9 +6,8 @@ extends ProgressBar
 
 #one start
 func _ready() -> void:
+	value = 100 #placeholder
 	update_bar()
-
-
 
 func update_bar():
 	if PlayerStatus == null:
