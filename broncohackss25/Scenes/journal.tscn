@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0s1xrvohf8ch"]
+[gd_scene load_steps=4 format=3 uid="uid://b0s1xrvohf8ch"]
 
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="1_civ5d"]
+[ext_resource type="Texture2D" uid="uid://cl1ida1d5vrqi" path="res://Assets/back-removebg-preview(1).png" id="2_okafp"]
+[ext_resource type="Script" uid="uid://bulkb2x8taqvi" path="res://Scenes/texture_button.gd" id="3_4xnl1"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -24,3 +26,14 @@ texture = ExtResource("1_civ5d")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.8, 0.8)
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -364.0
+offset_top = -299.0
+offset_right = -319.0
+offset_bottom = -254.0
+texture_normal = ExtResource("2_okafp")
+script = ExtResource("3_4xnl1")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
