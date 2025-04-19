@@ -40,7 +40,7 @@ func add_task(task_name: String, academic_stat: int, social_stat: int, stress_st
 
 func test_add_tasks(tasks):
 	for task in tasks:
-		add_task(task)
+		add_task(task, 5, -5, 5)
 
 func clear():
 	while get_child_count() > 0:
