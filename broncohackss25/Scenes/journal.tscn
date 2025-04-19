@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://do3t0847dunia" path="res://Scripts/journal.gd" id="1_x6005"]
 [ext_resource type="Texture2D" uid="uid://cgu057fw1di4w" path="res://Assets/Background/Desk.png" id="2_jqjty"]
 [ext_resource type="Texture2D" uid="uid://cl1ida1d5vrqi" path="res://Assets/back-removebg-preview(1).png" id="2_okafp"]
-[ext_resource type="Script" path="res://Scripts/go_to_room.gd" id="3_4xnl1"]
+[ext_resource type="Script" uid="uid://bulkb2x8taqvi" path="res://Scripts/go_to_room.gd" id="3_4xnl1"]
 [ext_resource type="PackedScene" uid="uid://l6axmqpyfjt2" path="res://Scenes/tasklist.tscn" id="4_4xnl1"]
 [ext_resource type="PackedScene" uid="uid://c706mvhxakqxq" path="res://Scenes/stats_ui.tscn" id="6_nv2gc"]
 
@@ -166,6 +166,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
