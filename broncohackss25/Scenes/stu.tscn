@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://dpe3gs7ugm2q0"]
+
+[ext_resource type="Texture2D" uid="uid://4hst1n8dg5mo" path="res://Assets/Stu/HiStu1.png" id="1_0qj4j"]
+[ext_resource type="Texture2D" uid="uid://cxeqfy40dwwr2" path="res://Assets/Stu/HiStu2.png" id="2_ow7hm"]
+[ext_resource type="Texture2D" uid="uid://d060piv2oah5c" path="res://Assets/Stu/NormalStu1.png" id="3_qf1dv"]
+[ext_resource type="Texture2D" uid="uid://b4p0sx8f3uk0g" path="res://Assets/Stu/NormalStu2.png" id="4_o03bb"]
+[ext_resource type="Texture2D" uid="uid://dtw6ik0plo5xd" path="res://Assets/Stu/ShrimpinStu1.png" id="5_bxefh"]
+[ext_resource type="Texture2D" uid="uid://bg6aruo8tw1an" path="res://Assets/Stu/ShrimpinStu2.png" id="6_fcpv1"]
+[ext_resource type="Texture2D" uid="uid://c3tihkptkvey1" path="res://Assets/Stu/ErmActuallyStu1.png" id="7_svpyi"]
+[ext_resource type="Texture2D" uid="uid://djbjsc74x58ev" path="res://Assets/Stu/ErmActuallyStu2.png" id="8_077he"]
+[ext_resource type="Texture2D" uid="uid://c4e3q8ys6er23" path="res://Assets/Stu/TiredStu1.png" id="9_7j57n"]
+[ext_resource type="Texture2D" uid="uid://c3t6inc7urq8v" path="res://Assets/Stu/TiredStu2.png" id="10_ocauu"]
+[ext_resource type="Script" uid="uid://qhc3sjf7jvou" path="res://Scripts/stu.gd" id="11_ow7hm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ow7hm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0qj4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ow7hm")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qf1dv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o03bb")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bxefh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fcpv1")
+}],
+"loop": true,
+"name": &"shrimpin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_svpyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_077he")
+}],
+"loop": true,
+"name": &"studious",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_7j57n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ocauu")
+}],
+"loop": true,
+"name": &"tired",
+"speed": 5.0
+}]
+
+[node name="STU" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ow7hm")
+animation = &"happy"
+frame_progress = 0.0406823
+script = ExtResource("11_ow7hm")
