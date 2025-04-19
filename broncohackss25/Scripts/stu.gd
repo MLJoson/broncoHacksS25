@@ -1,4 +1,6 @@
-extends AnimatedSprite2D
+extends Node2D
 
-#Connect to player status file
-@export var PlayerStatus: PlayerStatus
+@onready var animation = $AnimatedSprite2D
+
+func _ready():
+	animation.play("normal")
