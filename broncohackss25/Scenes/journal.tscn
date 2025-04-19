@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0s1xrvohf8ch"]
+[gd_scene load_steps=8 format=3 uid="uid://b0s1xrvohf8ch"]
 
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="1_civ5d"]
-[ext_resource type="Script" uid="uid://do3t0847dunia" path="res://Scripts/journal.gd" id="1_x6005"]
+[ext_resource type="Script" path="res://Scripts/journal.gd" id="1_x6005"]
+[ext_resource type="Texture2D" uid="uid://cgu057fw1di4w" path="res://Assets/Background/Desk.png" id="2_jqjty"]
 [ext_resource type="Texture2D" uid="uid://cl1ida1d5vrqi" path="res://Assets/back-removebg-preview(1).png" id="2_okafp"]
-[ext_resource type="Script" uid="uid://bulkb2x8taqvi" path="res://Scripts/go_to_room.gd" id="3_4xnl1"]
+[ext_resource type="Script" path="res://Scripts/go_to_room.gd" id="3_4xnl1"]
 [ext_resource type="PackedScene" uid="uid://l6axmqpyfjt2" path="res://Scenes/tasklist.tscn" id="4_4xnl1"]
 [ext_resource type="PackedScene" uid="uid://c706mvhxakqxq" path="res://Scenes/stats_ui.tscn" id="6_nv2gc"]
 
@@ -11,6 +12,19 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_x6005")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -736.0
+offset_top = -420.0
+offset_right = 736.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jqjty")
 
 [node name="JournalBg" type="TextureRect" parent="."]
 layout_mode = 1
