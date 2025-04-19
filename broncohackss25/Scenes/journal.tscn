@@ -1,10 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0s1xrvohf8ch"]
+[gd_scene load_steps=3 format=3 uid="uid://b0s1xrvohf8ch"]
 
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="1_civ5d"]
+[ext_resource type="Texture2D" uid="uid://cgu057fw1di4w" path="res://Assets/Background/Desk.png" id="1_d4r5f"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -752.0
+offset_top = -440.0
+offset_right = 535.0
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("1_d4r5f")
 
 [node name="JournalBg" type="TextureRect" parent="."]
 layout_mode = 1
@@ -21,6 +39,3 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_civ5d")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.8, 0.8)

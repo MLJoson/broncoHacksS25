@@ -33,4 +33,4 @@ script = ExtResource("1_xgxeb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rymcx")
 animation = &"dorm"
-frame_progress = 0.322735
+frame_progress = 0.838194
