@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkbtci03h0ubh"]
+[gd_scene load_steps=8 format=3 uid="uid://dkbtci03h0ubh"]
 
 [ext_resource type="Script" uid="uid://bus0kkm6n8p3n" path="res://Scripts/main.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://c706mvhxakqxq" path="res://Scenes/stats_ui.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://b8bodcpcgtg4l" path="res://Scenes/background.tscn" id="2_6bp64"]
 [ext_resource type="PackedScene" uid="uid://dpe3gs7ugm2q0" path="res://Scenes/stu.tscn" id="3_21xkr"]
 [ext_resource type="Texture2D" uid="uid://cdnscn70mvut2" path="res://Assets/planner_close.png" id="3_kry3j"]
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="4_21xkr"]
@@ -13,6 +14,24 @@ anchors_preset = 0
 script = ExtResource("1_21xkr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Background" parent="CanvasLayer/TextureRect" instance=ExtResource("2_6bp64")]
+position = Vector2(20, 0)
+scale = Vector2(1.15, 1.15)
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("1_jjgbg")]
 
