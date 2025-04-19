@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0s1xrvohf8ch"]
+[gd_scene load_steps=6 format=3 uid="uid://b0s1xrvohf8ch"]
 
 [ext_resource type="Texture2D" uid="uid://ci0y03ck6d3dc" path="res://Assets/planner_open.png" id="1_civ5d"]
+[ext_resource type="Script" uid="uid://do3t0847dunia" path="res://Scripts/journal.gd" id="1_x6005"]
 [ext_resource type="Texture2D" uid="uid://cl1ida1d5vrqi" path="res://Assets/back-removebg-preview(1).png" id="2_okafp"]
 [ext_resource type="Script" uid="uid://bulkb2x8taqvi" path="res://Scripts/go_to_room.gd" id="3_4xnl1"]
 [ext_resource type="PackedScene" uid="uid://l6axmqpyfjt2" path="res://Scenes/tasklist.tscn" id="4_4xnl1"]
@@ -8,6 +9,7 @@
 [node name="Node2D" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_x6005")
 
 [node name="JournalBg" type="TextureRect" parent="."]
 layout_mode = 1
@@ -57,4 +59,13 @@ offset_bottom = -219.0
 [node name="VBoxContainer" parent="HBoxContainer" instance=ExtResource("4_4xnl1")]
 layout_mode = 2
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 269.0
+offset_right = 361.0
+offset_bottom = 300.0
+text = "End Day"
+
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
