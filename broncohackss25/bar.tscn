@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://g2tenaqhkqfq"]
+
+[ext_resource type="Script" uid="uid://b85e3m1ixxx0t" path="res://Scripts/bar.gd" id="1_qyha7"]
+
+[sub_resource type="Theme" id="Theme_qyha7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2n50a"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.156863, 0.156863, 0.156863, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj7cv"]
+bg_color = Color(0, 0.501961, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Bar" type="ProgressBar"]
+offset_right = 201.0
+offset_bottom = 32.0
+theme = SubResource("Theme_qyha7")
+theme_override_styles/background = SubResource("StyleBoxFlat_2n50a")
+theme_override_styles/fill = SubResource("StyleBoxFlat_aj7cv")
+value = 80.0
+script = ExtResource("1_qyha7")
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]
