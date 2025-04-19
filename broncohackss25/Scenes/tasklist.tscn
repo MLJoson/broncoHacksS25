@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://l6axmqpyfjt2"]
+[gd_scene load_steps=2 format=3 uid="uid://u4mdigjotbji"]
 
-[ext_resource type="Script" uid="uid://q0gomo07rhgc" path="res://Scripts/tasklist.gd" id="1_jofbh"]
+[ext_resource type="Script" path="res://Scripts/tasklist.gd" id="1_jofbh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
