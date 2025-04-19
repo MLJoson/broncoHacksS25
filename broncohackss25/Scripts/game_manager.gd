@@ -626,9 +626,31 @@ func get_planned_stat_changes() -> Dictionary:
 			total_changes[stat] += action.effects[stat]
 	return total_changes
 
+func calculate_stu():
+	#if 0 - defualt
+	#if 1 - happy
+	#if 2 - shrimpin
+	#if 3 - crashing out
+	#if 4 - normal
+	#if 5 - nerd
+	#if 6 - tired
+	var stu_status: int = 4;
+	if (PlayerStatus.academic < 25):
+		stu_status = 2
+	if(PlayerStatus.academic > 75):
+		stu_status = 5
+	if(PlayerStatus.wellbeing < 25):
+		stu_status = 3
+	if(PlayerStatus.wellbeing > 75):
+		stu_status = 1
+	if(PlayerStatus.social < 25):
+		stu_status = 6
+	if(PlayerStatus.social > 75):
+		stu_status = 1
+
 func _ready():
 	#Example usage
-	study()
+	#study()
 	PlayerStatus.print_stats()
 
 func pool_to_array() -> Array:
